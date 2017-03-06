@@ -10,7 +10,7 @@ def genera_pdf(rutarchivo,resultados):
     """
     pagina_0 = chameleon.PageTemplateFile(template)
     pagina = pagina_0.render(resultados=resultados)
-    print(pagina)        
+    # print(pagina) #------------------------------------------
     pdf = pydf.generate_pdf(pagina, orientation='Landscape', page_size='A3')
     with open(rutarchivo,'wb') as f:
         f.write(pdf)
